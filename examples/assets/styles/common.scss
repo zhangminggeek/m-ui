@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #409EFF;
+  text-decoration: none;
+}
+
+code {
+  background-color: #f9fafc;
+  padding: 0 4px;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+
+/* 功能 */
+.f-clear:after{
+  content: '';
+  height: 0;
+  clear: both;
+  display: block;
+  visibility:hidden;
+}
+.f-scrollbar::-webkit-scrollbar{
+  width: 6px;
+}
+.f-scrollbar::-webkit-scrollbar-thumb{
+  background-color: #E9E9E9;
+  -webkit-border-radius: 100px;
+}
+.f-scrollbar::-webkit-scrollbar-track-piece{
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+}
+.f-fl{float: left;}
+.f-fr{float: right;}
