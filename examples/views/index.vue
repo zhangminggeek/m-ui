@@ -41,6 +41,6 @@ export default {
     height: 100vh;
   }
   .g-container{
-    margin: 50px 0 0 200px;
+    padding: 50px 0 0 200px;
   }
 </style>
