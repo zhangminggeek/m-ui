@@ -1,0 +1,46 @@
+@import './common/var';
+@import './mixins/mixins';
+@import "./mixins/utils";
+@import "./mixins/button";
+
+@include b(button) {
+  display: inline-block;
+  color: $--button-default-color;
+  border: $--border-base;
+  background: $--button-default-fill;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  margin: 0;
+  @include utils-user-select(none);
+  & + & {
+    margin-left: 10px;
+  }
+  &:hover,
+  &:focus {
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+
+  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+
+  @include m(primary) {
+    @include button-variant($--button-primary-color, $--button-primary-fill, $--button-primary-border);
+  }
+  @include m(success) {
+    @include button-variant($--button-success-color, $--button-success-fill, $--button-success-border);
+  }
+  @include m(warning) {
+    @include button-variant($--button-warning-color, $--button-warning-fill, $--button-warning-border);
+  }
+  @include m(danger) {
+    @include button-variant($--button-danger-color, $--button-danger-fill, $--button-danger-border);
+  }
+  @include m(info) {
+    @include button-variant($--button-info-color, $--button-info-fill, $--button-info-border);
+  }
+}
