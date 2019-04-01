@@ -1,61 +1,88 @@
-*{
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-html, body {
-  height: 100%;
-  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-
-a {
-  color: #409EFF;
-  text-decoration: none;
+body {
+  line-height: 1;
 }
-
-code {
-  background-color: #f9fafc;
-  padding: 0 4px;
-  border: 1px solid #eaeefb;
-  border-radius: 4px;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-}
-
-li{
+ol, ul {
   list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 功能 */
-.f-clear:after{
+.f-clear:after {
   content: '';
   height: 0;
   clear: both;
   display: block;
   visibility:hidden;
 }
-.f-scrollbar::-webkit-scrollbar{
+.f-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
-.f-scrollbar::-webkit-scrollbar-thumb{
+.f-scrollbar::-webkit-scrollbar-thumb {
   background-color: #E9E9E9;
   -webkit-border-radius: 100px;
 }
-.f-scrollbar::-webkit-scrollbar-track-piece{
+.f-scrollbar::-webkit-scrollbar-track-piece {
   background-color: #fff;
   -webkit-border-radius: 6px;
 }
-.f-fl{float: left;}
-.f-fr{float: right;}
+.f-fl {float: left;}
+.f-fr {float: right;}
 
 /* common */
-.m-container{
+.m-container {
   padding: 20px;
+}
+
+.page__title{
+  font-size: 28px;
+  font-weight: 400;
+  color: #1f2f3d;
+}
+.page__description{
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+.page__subtitle{
+  font-size: 22px;
+  font-weight: 400;
+  color: #1f2f3d;
+  margin: 55px 0 20px;
 }

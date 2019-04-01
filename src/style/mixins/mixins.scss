@@ -1,6 +1,6 @@
 @import 'function';
 
-// 统一增加前缀
+// 增加统一前缀
 @mixin b($block) {
   $B: $namespace+'-'+$block !global;
 
