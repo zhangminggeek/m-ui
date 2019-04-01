@@ -1,6 +1,6 @@
 @import 'function';
 
-// 增加统一前缀
+// 增加统一前缀（BEM B）
 @mixin b($block) {
   $B: $namespace+'-'+$block !global;
 
@@ -18,7 +18,33 @@
   }
 }
 
-// 增加修饰后缀
+// 所在元素 （BEM E）
+@mixin e($element) {
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) { // 判断是否包含特殊class，如前缀、后缀、伪类
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+// 增加修饰后缀 （BEM M）
 @mixin m($modifier) {
   $selector: &;
   $currentSelector: "";

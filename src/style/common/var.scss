@@ -24,14 +24,26 @@ $--color-text-placeholder: #c0c4cc !default;
 
 /* Font */
 $--font-size-base: 14px !default;
+$--font-weight-primary: 500 !default;
+
+/* Background
+-------------------------- */
+$--background-color-base: #f5f7fa !default;
 
 /* Border */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
 $--border-color-base: #dcdfe6 !default;
+$--border-color-light: #e4e7ed !default;
 $--border-color-lighter: #ebeef5 !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 $--border-radius-base: 4px !default;
+$--border-radius-circle: 100% !default;
+
+/* Disable base */
+$--disabled-fill-base: $--background-color-base !default;
+$--disabled-color-base: $--color-text-placeholder !default;
+$--disabled-border-base: $--border-color-light !default;
 
 /* Button */
 $--button-font-size: $--font-size-base !default;
@@ -84,3 +96,29 @@ $--button-info-fill: $--color-info !default;
 
 $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
+
+/* Radio */
+$--radio-font-size: 14px !default;
+$--radio-font-weight: $--font-weight-primary !default;
+$--radio-color: $--color-text-regular !default;
+$--radio-input-height: 14px !default;
+$--radio-input-width: 14px !default;
+$--radio-input-border-radius: $--border-radius-circle !default;
+$--radio-input-fill: $--color-white !default;
+$--radio-input-border: $--border-base !default;
+$--radio-input-border-color: $--border-color-base !default;
+
+$--radio-checked-text-color: $--color-primary !default;
+$--radio-checked-input-border-color: $--color-primary !default;
+$--radio-checked-input-fill: $--color-white !default;
+$--radio-checked-icon-color: $--color-primary !default;
+
+$--radio-disabled-input-border-color: $--disabled-border-base !default;
+$--radio-disabled-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-icon-color: $--disabled-fill-base !default;
+
+$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
+$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+
+$--radio-input-border-color-hover: $--color-primary !default;

@@ -1,3 +1,4 @@
 $namespace: 'mm'; // class前缀
 $state-prefix: 'is-'; // 状态class前缀
-$modifier-separator: '--'; // 修饰class后缀
+$element-separator: '__'; // 元素分割符
+$modifier-separator: '--'; // 修饰class后缀分隔符

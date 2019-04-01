@@ -22,6 +22,11 @@ export default new Router({
           path: 'button',
           name: 'components-button',
           component: () => import('./views/button')
+        },
+        {
+          path: 'radio',
+          name: 'components-radio',
+          component: () => import('./views/radio')
         }
       ]
     }

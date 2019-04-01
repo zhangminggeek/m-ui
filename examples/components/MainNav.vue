@@ -19,7 +19,8 @@ export default {
   data () {
     return {
       pageList: [
-        { label: '按钮', path: '/components/button' }
+        { label: '按钮', path: '/components/button' },
+        { label: '单选框', path: '/components/radio' }
       ]
     }
   },
