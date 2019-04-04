@@ -15,7 +15,8 @@
         :name="name"
         :value="label"
         v-model="model"
-        :disabled="disabled">
+        :disabled="disabled"
+        @change="handleChange">
     </span>
     <span class="mm-radio__label">
       <slot></slot>
@@ -32,13 +33,19 @@ export default {
     name: String,
     disabled: Boolean
   },
+  methods: {
+    handleChange () {
+      this.$nextTick(() => {
+        this.$emit('change', this.model)
+      })
+    }
+  },
   computed: {
     model: {
       get () {
         return this.value
       },
       set (val) {
-        console.log(val)
         this.$emit('input', val)
       }
     }
